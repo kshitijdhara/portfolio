@@ -1,0 +1,369 @@
+/*--------------------------------------------------------------
+# COMMON
+--------------------------------------------------------------*/
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container-fluid {
+	background-color: #e7eff5;
+}
+p {
+	font-size: 1.1rem;
+}
+hr {
+	width: 3rem;
+	border: 1.5px solid #149ddd;
+	margin-left: 0px;
+}
+ul {
+	list-style: none;
+	font-size: 1.1rem;
+	line-height: 1.8rem;
+}
+li span,
+li span {
+	color: #149ddd;
+}
+/*--------------------------------------------------------------
+# SIDE-HEADER
+--------------------------------------------------------------*/
+.sidebar {
+	background-color: black;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	justify-content: space-between;
+}
+.profile {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.img-border {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 130px;
+	width: 130px;
+	background: #6f6f70;
+	border-radius: 50% !important;
+}
+.img-border:hover {
+	background-color: #149ddd;
+}
+.profile img {
+	height: 120px;
+	width: 120px;
+	border-radius: 50% !important;
+}
+
+.profile .name a {
+	color: white;
+	text-transform: uppercase;
+	opacity: 0.9;
+	text-decoration: none;
+}
+
+.socials,
+.socials a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.socials a {
+	font-size: 20px;
+	background: #212431;
+	color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	width: 36px;
+	height: 36px;
+}
+.socials a:hover {
+	background: #149ddd;
+}
+.contents {
+	margin-bottom: 4rem;
+}
+.contents a {
+	color: rgba(254, 254, 254, 0.8);
+	margin: 0.7rem 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contents a:hover,
+.contents a:active {
+	color: white;
+}
+.contents a:hover span,
+.contents a:active span {
+	color: #149ddd;
+}
+.c-icon {
+	font-size: 22px;
+}
+
+.copyright {
+	font-size: 12px;
+	color: silver;
+}
+
+/*--------------------------------------------------------------
+# HOME
+--------------------------------------------------------------*/
+.home {
+	height: 100vh;
+	background-image: url("images/2.jpg");
+	background-size: cover;
+	background-position-x: 7rem;
+	position: relative;
+	background-attachment: fixed;
+	background-color: rgba(0, 0, 0, 0.75);
+	background-blend-mode: overlay;
+}
+.home p {
+	position: absolute;
+	top: 15rem;
+	left: 10rem;
+	font-weight: 600;
+	color: rgba(245, 245, 245, 0.8);
+}
+.home h4 {
+	position: absolute;
+	top: 20rem;
+	left: 15rem;
+	color: rgba(245, 245, 245, 0.8);
+}
+
+/*--------------------------------------------------------------
+# ABOUT
+--------------------------------------------------------------*/
+.abt-body img,
+.contact-bottom img {
+	height: 21rem;
+	width: 100%;
+}
+
+.abt-main-top h3 {
+	color: darkblue;
+}
+
+/*--------------------------------------------------------------
+# SKILLS
+--------------------------------------------------------------*/
+
+.progress-title {
+	display: flex;
+	justify-content: space-between;
+}
+.progress-title span {
+	font-size: 0.9rem;
+	margin-bottom: 0.15rem;
+	font-weight: 500;
+}
+.progress-bar {
+	background-color: #149ddd;
+}
+.progress {
+	height: 0.7rem;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+/*--------------------------------------------------------------
+# RESUME
+--------------------------------------------------------------*/
+.resume-bottom p,
+.resume-bottom li {
+	font-size: 0.95rem;
+}
+.resume-bottom ul {
+	list-style-position: outside;
+}
+.year {
+	display: inline-block;
+	padding: 0rem 0.3rem;
+	background-color: #d4e4f0;
+}
+
+/*--------------------------------------------------------------
+# FORM
+--------------------------------------------------------------*/
+
+textarea.app-form-control {
+	padding: 0px;
+}
+.background {
+	display: flex;
+}
+.screen {
+	position: relative;
+	background: #3e3e3e;
+	border-radius: 15px;
+}
+.screen-body {
+	display: flex;
+}
+
+.screen-body-item {
+	flex: 1;
+	padding: 50px;
+}
+
+.screen-body-item.left {
+	display: flex;
+	flex-direction: column;
+}
+
+.app-title {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	color: #ea1d6f;
+	font-size: 26px;
+}
+
+.app-title:after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 25px;
+	height: 4px;
+	background: #ea1d6f;
+}
+
+.app-contact {
+	margin-top: auto;
+	font-size: 8px;
+	color: #888;
+}
+
+.app-form-group {
+	margin-bottom: 15px;
+}
+
+.app-form-group.message {
+	margin-top: 40px;
+}
+
+.app-form-group.buttons {
+	margin-bottom: 0;
+	text-align: right;
+	outline: none;
+	border: none;
+	box-shadow: none;
+}
+
+.app-form-control {
+	width: 100%;
+	padding: 10px 0;
+	background: none;
+	border: none;
+	border-bottom: 1px solid #666;
+	color: #ddd;
+	font-size: 14px;
+	text-transform: uppercase;
+	outline: none;
+	transition: border-color 0.2s;
+}
+
+.color {
+	color: #666;
+	font-size: 13px;
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+.app-form-control::placeholder,
+input[type="radio"]::value {
+	color: #666;
+}
+
+.app-form-control:focus {
+	border-bottom-color: #ddd;
+}
+form {
+	box-sizing: border-box;
+}
+.app-form-button {
+	background: none;
+	border: none;
+	color: #ea1d6f;
+	font-size: 14px;
+	cursor: pointer;
+	outline: none;
+	box-shadow: none;
+}
+
+.app-form-button:hover {
+	color: #b9134f;
+}
+.app-form-button:focus {
+	outline: none;
+	box-shadow: none;
+}
+.credits {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	color: #ffa4bd;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.credits-link {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.dribbble {
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+}
+.contact-bottom .container,
+form,
+.screen-body-item,
+.screen-body-item.left {
+	height: 352px;
+}
+/*--------------------------------------------------------------
+# MEDIA QUERRY
+--------------------------------------------------------------*/
+@media (max-width: 1440px) {
+	.abt-body li,
+	.abt-head,
+	.about p {
+		font-size: 16px !important;
+	}
+	.profile {
+		margin-top: 20px !important;
+	}
+	.contents {
+		margin-top: 2.2rem;
+		font-size: 14.5px;
+	}
+	.img-border {
+		height: 120px;
+		width: 120px;
+	}
+	.profile img {
+		height: 110px;
+		width: 110px;
+	}
+}
+
+@media (max-width: 1200px) {
+}
