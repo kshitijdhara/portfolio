@@ -39,12 +39,23 @@
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-169007209-3');
+    function loadMarkdownContent(filename) {
+      fetch(filename)
+        .then(response => response.text())
+        .then(text => {
+          const converter = new showdown.Converter();
+          const html = converter.makeHtml(text);
+          document.getElementById('content').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading markdown file:', error));
+    }
   </script>
 
 
@@ -83,8 +94,8 @@
               target="_blank"> <span>Resume</span></a></li>
           <!-- <li><a href="#links"> <span>Resume & Links</span></a></li> -->
           <li><a href="#contacts"> <span>Contact</span></a></li>
-          <li><a href="dataviz2.md">Tellling Stories with data portfolio</a></li>
-
+          <li><a href="#" onclick="loadMarkdownContent('dataviz2.md')">Tellling Stories with data portfolio</a></li>
+          <div id="content"></div>
         </ul>
       </nav><!-- .nav-menu -->
 
