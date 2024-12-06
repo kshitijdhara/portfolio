@@ -178,15 +178,15 @@ document.querySelectorAll('.project-item a').forEach(item => {
   });
 });
 
-// Close the modal when the user clicks on <span> (x)
-document.querySelector('.close').onclick = function() {
+// Close the modal when the user clicks on the close button
+document.querySelector('.modal-close-btn').addEventListener('click', function() {
   document.getElementById('projectModal').style.display = "none";
-}
+});
 
-// Close the modal when the user clicks anywhere outside of the modal
-window.onclick = function(event) {
+// Close the modal when the user clicks anywhere outside of the modal content
+window.addEventListener('click', function(event) {
   const modal = document.getElementById('projectModal');
-  if (event.target == modal) {
+  if (event.target === modal) {
     modal.style.display = "none";
   }
-}
+});
