@@ -157,35 +157,36 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
-// JavaScript to handle modal display
-document.querySelectorAll('.project-item a').forEach(item => {
-  item.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default anchor click behavior
 
-    // Get project details
-    const title = this.querySelector('.project-title').innerText;
-    const category = this.querySelector('.project-category').innerText;
-    const imageSrc = this.querySelector('img').src;
+// // JavaScript to handle modal display
+// document.querySelectorAll('.project-item a').forEach(item => {
+//   item.addEventListener('click', function(event) {
+//     event.preventDefault(); // Prevent default anchor click behavior
 
-    // Set modal content
-    document.getElementById('modalTitle').innerText = title;
-    document.getElementById('modalCategory').innerText = category;
-    document.getElementById('modalImage').src = imageSrc;
+//     // Get project details
+//     const title = this.querySelector('.project-title').innerText;
+//     const category = this.querySelector('.project-category').innerText;
+//     const imageSrc = this.querySelector('img').src;
 
-    // Display the modal
-    document.getElementById('projectModal').style.display = "block";
-  });
-});
+//     // Set modal content
+//     document.getElementById('modalTitle').innerText = title;
+//     document.getElementById('modalCategory').innerText = category;
+//     document.getElementById('modalImage').src = imageSrc;
 
-// Close the modal when the user clicks on <span> (x)
-document.querySelector('.close').onclick = function() {
-  document.getElementById('projectModal').style.display = "none";
-}
+//     // Display the modal
+//     document.getElementById('projectModal').style.display = "block";
+//   });
+// });
 
-// Close the modal when the user clicks anywhere outside of the modal
-window.onclick = function(event) {
-  const modal = document.getElementById('projectModal');
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+// // Close the modal when the user clicks on <span> (x)
+// document.querySelector('.close').onclick = function() {
+//   document.getElementById('projectModal').style.display = "none";
+// }
+
+// // Close the modal when the user clicks anywhere outside of the modal
+// window.onclick = function(event) {
+//   const modal = document.getElementById('projectModal');
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
