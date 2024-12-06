@@ -2027,7 +2027,7 @@ textarea.form-input::-webkit-resizer {
   }
 }
 
-Modal Styles
+/* Modal Styles */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
